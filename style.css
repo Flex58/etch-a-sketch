@@ -1,0 +1,16 @@
+.grid div {
+
+    border: groove 1px black;
+    border-radius: 5px;
+    box-sizing: border-box;
+} 
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
