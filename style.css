@@ -1,6 +1,6 @@
 .grid div {
 
-     border: solid 1px rgb(62, 42, 53);
+     border: solid 1px rgb(61, 41, 52);
     box-sizing: border-box;
     background-color: white;
 
@@ -27,4 +27,21 @@ body {
     margin-bottom: 25px;
     margin-top: 25px;
     padding: 7px 10px;
+    align-self: center;
+    justify-self: center;
+}
+
+#color-select {
+    margin-right: 650px;
+    background-color: #D7BBA8;
+    border-radius: 5px;
+    border: groove 2px #3E2A35;
+    
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    
 }
