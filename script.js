@@ -1,9 +1,10 @@
 const container = document.querySelector("#container");
-let gridSize = 50;
+const generate = document.querySelector("#generate");
+let gridSize;
 let grid = [];
 const SIZE =  800;
+let gridSquare;
 drawGrid()
-const gridSquare = document.querySelectorAll(".gridSquare");
  
 function drawGrid(){
     for (let i = 0; i < gridSize * gridSize; i++){
@@ -12,15 +13,25 @@ function drawGrid(){
         grid[i].style.height = 100 / gridSize  + "%"; 
         grid[i].setAttribute("class", "gridSquare")
      }
-}
+     gridSquare = document.querySelectorAll(".gridSquare");
+     gridSquare.forEach((div) => {
+        div.addEventListener("mouseover", () => {
+            div.style.backgroundColor = "green";
+        })
+    })
+    }
 
 container.style.width =  SIZE + "px";
 container.style.height =  SIZE + "px"
 
 
-gridSquare.forEach((div) => {
-    div.addEventListener("mouseover", () => {
-        div.style.backgroundColor = "green";
-        console.log("test");
-    })
+
+
+generate.addEventListener("click", () =>{
+    for (let i = 0; i < gridSize * gridSize; i++){
+        container.removeChild(grid[i]);
+    }
+    do gridSize = prompt("Enter your Grid Size (cant exceed 100): ")
+    while (gridSize > 100)
+    drawGrid()
 })
