@@ -18,7 +18,9 @@ function drawGrid(){
         div.style.opacity = 1;
         div.addEventListener("mouseover", () => {
             div.style.backgroundColor = document.querySelector("#color-select").value;
-            div.style.opacity -= 0.1;
+            if (document.querySelector("#color-select").value != ""){
+                div.style.opacity -= 0.1;
+            }
         })
     })
     }
